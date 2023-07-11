@@ -1,0 +1,17 @@
+<li [ngStyle]="{ display: 'flex', gap: '4px' }">
+  <span>{{ user.name }} </span>
+  <span>{{ user.email }}</span>
+  <a
+    routerLink="/users/{{ user.id }}"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    >View
+  </a>
+  <a
+    routerLink="/users/edit/{{ user.id }}"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    >Edit
+  </a>
+  <button (click)="handleDelete()">delete</button>
+</li>
